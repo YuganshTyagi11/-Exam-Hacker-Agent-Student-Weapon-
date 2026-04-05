@@ -8,6 +8,10 @@ A lightweight, browser-only web app that helps students turn syllabus files and 
 
 The app runs entirely in the browser using vanilla HTML/CSS/JS and PDF.js from CDN.
 
+## Live Demo
+
+🔗 https://exam-hacker-agent.onrender.com/
+
 ## Features
 
 - Upload **multiple** syllabus files (`.pdf`, `.txt`, `.md`)
