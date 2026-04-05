@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exam Hacker Agent — Student Weapon</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="bg-blob blob-1"></div>
+    <div class="bg-blob blob-2"></div>
+
+    <main class="container">
+      <header class="hero">
+        <p class="badge">100% Free • Works in Browser</p>
+        <h1>Exam Hacker Agent <span>(Student Weapon)</span></h1>
+        <p class="hero-sub">
+          Upload your syllabus and past papers to instantly get <strong>important topics</strong>,
+          <strong>likely exam questions</strong>, and a <strong>smart study plan</strong>.
+        </p>
+      </header>
+
+      <section class="panel input-panel">
+        <div class="field-grid">
+          <label class="upload-card">
+            <span class="upload-title">Syllabus files</span>
+            <span class="upload-sub">PDF, TXT, MD (multiple allowed)</span>
+            <input id="syllabusFiles" type="file" accept=".pdf,.txt,.md" multiple />
+          </label>
+
+          <label class="upload-card">
+            <span class="upload-title">Past papers</span>
+            <span class="upload-sub">PDF, TXT, MD (multiple allowed)</span>
+            <input id="pastPaperFiles" type="file" accept=".pdf,.txt,.md" multiple />
+          </label>
+        </div>
+
+        <div class="controls">
+          <label>
+            Exam date
+            <input id="examDate" type="date" />
+          </label>
+          <label>
+            Hours/day
+            <input id="hoursPerDay" type="number" min="1" max="16" value="3" />
+          </label>
+          <button id="analyzeBtn">Generate Strategy</button>
+        </div>
+
+        <p id="statusText" class="status">Upload files and click “Generate Strategy”.</p>
+      </section>
+
+      <section id="results" class="results hidden">
+        <article class="panel">
+          <h2>🔥 Important Topics</h2>
+          <ul id="importantTopics"></ul>
+        </article>
+
+        <article class="panel">
+          <h2>🎯 Likely Questions</h2>
+          <ol id="likelyQuestions"></ol>
+        </article>
+
+        <article class="panel">
+          <h2>📅 Study Plan</h2>
+          <ul id="studyPlan"></ul>
+        </article>
+      </section>
+    </main>
+
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
